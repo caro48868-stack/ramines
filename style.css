@@ -53,13 +53,15 @@ body {
 /* 5. El cuadro verde donde se armará el ramo */
 .contenedor-lienzo {
     .contenedor-lienzo {
+  .contenedor-lienzo {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    /* Cambiamos el color plano por tu imagen de hierba: */
-    background-image: url('flores/hierba.png'); 
-    background-size: cover; /* Hace que la imagen cubra todo el cuadro */
+    /* Aquí le decimos que busque tu archivo "fondo" */
+    background-image: url('flores/fondo'); 
+    background-size: cover;
     background-position: center;
+}
 }
 }
 
