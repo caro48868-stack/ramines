@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fdf7f5;
+}
+
+header {
+    background: #f7d8df;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #7b3f4a;
+}
+
+header p {
+    color: #555;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+#panel {
+    width: 250px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+#flores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.flor {
+    width: 70px;
+}
+
+#lienzo {
+    flex: 1;
+}
+
+#canvas {
+    background: white;
+    border: 3px dashed #d8b5bd;
+    border-radius: 20px;
+    height: 600px;
+}
