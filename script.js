@@ -41,12 +41,12 @@ function comprobarFloresParaLazo() {
   // Si hay 4 o más flores y el lazo no está puesto...
   if (numeroDeFlores >= 4 && !lazoPuesto) {
     
-    // Buscamos tu archivo "lazo" en la carpeta flores
-    fabric.Image.fromURL('flores/lazo', function(oLazo) {
-      oLazo.scale(0.5); // Puedes cambiar este número (0.6, 0.4) si queda grande o chico
+    // Buscamos tu archivo "lazo.png" en la carpeta flores
+    fabric.Image.fromURL('flores/lazo.png', function(oLazo) {
+      oLazo.scale(0.5); // Puedes cambiar este número si queda grande o chico
       oLazo.set({
         left: 160, 
-        top: 220, // Lo sitúa un poco más abajo del centro, ideal para un ramo
+        top: 220, // Lo sitúa un poco más abajo del centro
         cornerColor: '#ffffff',
         cornerStrokeColor: '#4a5d4e',
         borderColor: '#4a5d4e',
