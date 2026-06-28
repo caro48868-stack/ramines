@@ -1,6 +1,6 @@
 /* 1. Configuración general de la pantalla */
 body {
-    background-color: #f4f3ef; /* Un fondo gris claro/arena muy limpio */
+    background-color: #f4f3ef; /* Un fondo claro muy limpio */
     margin: 0;
     padding: 20px;
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -22,7 +22,7 @@ body {
     width: 100%;
 }
 
-/* 3. Estilo del título (Inspirado en tus capturas) */
+/* 3. Estilo del título */
 .cabecera {
     text-align: center;
     margin-bottom: 25px;
@@ -41,7 +41,7 @@ body {
     margin: 5px 0 0 0;
 }
 
-/* 4. Distribución de la zona de trabajo (Lienzo a un lado, menú al otro) */
+/* 4. Distribución de la zona de trabajo */
 .zona-trabajo {
     display: flex;
     flex-wrap: wrap;
@@ -50,19 +50,14 @@ body {
     align-items: flex-start;
 }
 
-/* 5. El cuadro verde donde se armará el ramo */
+/* 5. El lienzo donde ahora cargará tu dibujo "fondo.png" */
 .contenedor-lienzo {
-    .contenedor-lienzo {
-  .contenedor-lienzo {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    /* Aquí le decimos que busque tu archivo "fondo" */
-    background-image: url('flores/fondo'); 
-    background-size: cover;
+    background-image: url('flores/fondo.png'); /* Busca tu imagen renombrada */
+    background-size: cover; /* Hace que tu dibujo llene todo el cuadro */
     background-position: center;
-}
-}
 }
 
 /* 6. Panel de control y menú de flores */
@@ -83,18 +78,18 @@ body {
     text-align: center;
 }
 
-/* 7. Cuadrícula para que tus flores se vean ordenadas */
+/* 7. Cuadrícula de flores */
 .cuadrícula-flores {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     margin-bottom: 25px;
-    max-height: 220px;
-    overflow-y: auto; /* Por si añades más flores en el futuro */
+    max-height: 250px;
+    overflow-y: auto;
     padding: 5px;
 }
 
-/* Cada flor individual del menú */
+/* Cada flor individual */
 .flor-item {
     width: 100%;
     height: 70px;
@@ -145,4 +140,5 @@ button {
 }
 
 .boton-secundario:hover {
-    background
+    background-color: #d0d0d0;
+}
