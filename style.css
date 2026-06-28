@@ -1,55 +1,141 @@
+/* 1. Configuración general de la pantalla */
 body {
+    background-color: #f4f3ef; /* Un fondo gris claro/arena muy limpio */
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fdf7f5;
+    padding: 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
-header {
-    background: #f7d8df;
+/* 2. Contenedor de toda la aplicación */
+.interfaz-juego {
+    background: #ffffff;
     padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 900px;
+    width: 100%;
+}
+
+/* 3. Estilo del título (Inspirado en tus capturas) */
+.cabecera {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.cabecera h1 {
+    font-size: 28px;
+    letter-spacing: 3px;
+    margin: 0;
+    color: #4a5d4e; /* Verde oscuro elegante */
+}
+
+.cabecera p {
+    font-size: 14px;
+    color: #888;
+    margin: 5px 0 0 0;
+}
+
+/* 4. Distribución de la zona de trabajo (Lienzo a un lado, menú al otro) */
+.zona-trabajo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* 5. El cuadro verde donde se armará el ramo */
+.contenedor-lienzo {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background-color: #6b8c42; /* Verde césped similar a tus ejemplos */
+}
+
+/* 6. Panel de control y menú de flores */
+.panel-control {
+    flex: 1;
+    min-width: 280px;
+    background: #faf9f6;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #eae7e1;
+}
+
+.panel-control h3 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    color: #7b3f4a;
+/* 7. Cuadrícula para que tus flores se vean ordenadas */
+.cuadrícula-flores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+    max-height: 220px;
+    overflow-y: auto; /* Por si añades más flores en el futuro */
+    padding: 5px;
 }
 
-header p {
-    color: #555;
+/* Cada flor individual del menú */
+.flor-item {
+    width: 100%;
+    height: 70px;
+    object-fit: contain;
+    background: #ffffff;
+    border: 1px solid #ebdcd0;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-main {
+.flor-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* 8. Botones */
+.acciones {
     display: flex;
-    gap: 20px;
-    padding: 20px;
-}
-
-#panel {
-    width: 250px;
-    background: white;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
-}
-
-#flores {
-    display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 10px;
 }
 
-.flor {
-    width: 70px;
+button {
+    padding: 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
 }
 
-#lienzo {
-    flex: 1;
+.boton-peligro {
+    background-color: #e07a5f;
+    color: white;
 }
 
-#canvas {
-    background: white;
-    border: 3px dashed #d8b5bd;
-    border-radius: 20px;
-    height: 600px;
+.boton-peligro:hover {
+    background-color: #c96449;
 }
+
+.boton-secundario {
+    background-color: #dfdfdf;
+    color: #555;
+}
+
+.boton-secundario:hover {
+    background
