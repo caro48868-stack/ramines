@@ -10,7 +10,7 @@ document.querySelectorAll('.flor-item').forEach(img => {
     const urlImagen = this.getAttribute('data-img');
     
     fabric.Image.fromURL(urlImagen, function(oImg) {
-      oImg.scale(0.4); // Tamaño de la flor
+      oImg.scale(0.4); // Tamaño inicial de las flores
       oImg.set({
         left: 150,
         top: 150,
@@ -20,13 +20,13 @@ document.querySelectorAll('.flor-item').forEach(img => {
         cornerSize: 10,
         transparentCorners: false,
         cornerStyle: 'circle',
-        tipo: 'flor' // Etiqueta para saber que es una flor
+        tipo: 'flor' // Etiqueta para identificarlas
       });
       
       canvas.add(oImg);
       canvas.setActiveObject(oImg);
       
-      // Cada vez que añadimos una flor, comprobamos si llegamos a 4
+      // Comprobamos si hay que poner el lazo
       comprobarFloresParaLazo();
     });
   });
@@ -35,7 +35,6 @@ document.querySelectorAll('.flor-item').forEach(img => {
 // Función que cuenta las flores y añade tu lazo
 function comprobarFloresParaLazo() {
   const todosLosObjetos = canvas.getObjects();
-  // Contamos cuántas flores hay en el lienzo actualmente
   const numeroDeFlores = todosLosObjetos.filter(obj => obj.tipo === 'flor').length;
   
   // Si hay 4 o más flores y el lazo no está puesto...
@@ -43,10 +42,10 @@ function comprobarFloresParaLazo() {
     
     // Buscamos tu archivo "lazo.png" en la carpeta flores
     fabric.Image.fromURL('flores/lazo.png', function(oLazo) {
-      oLazo.scale(0.5); // Puedes cambiar este número si queda grande o chico
+      oLazo.scale(0.5); // Ajusta este número si quieres el lazo más grande o pequeño
       oLazo.set({
         left: 160, 
-        top: 220, // Lo sitúa un poco más abajo del centro
+        top: 220, // Posicionado estratégicamente abajo en el centro
         cornerColor: '#ffffff',
         cornerStrokeColor: '#4a5d4e',
         borderColor: '#4a5d4e',
@@ -57,7 +56,7 @@ function comprobarFloresParaLazo() {
       });
       
       canvas.add(oLazo);
-      oLazo.bringToFront(); // Hace que el lazo se ponga por encima de las flores
+      oLazo.bringToFront(); // Al frente de las flores
       canvas.renderAll();
       
       lazoPuesto = true; 
@@ -68,7 +67,7 @@ function comprobarFloresParaLazo() {
 // 3. Botón "Borrar seleccionada"
 document.getElementById('btn-borrar').addEventListener('click', function() {
   const objetoActivo = canvas.getActiveObject();
-  if (objetoActivo) {
+  if (objetoActive) {
     if (objetoActivo.tipo === 'lazo') {
       lazoPuesto = false;
     }
