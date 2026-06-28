@@ -1,9 +1,18 @@
+/* 0. REGISTRAR TU PROPIA TIPOGRAFÍA */
+@font-face {
+    font-family: 'MiTipografiaPropia';
+    /* CAMBIA 'TU_ARCHIVO_AQUÍ.ttf' por el nombre exacto de tu archivo subido */
+    src: url('flores/TU_ARCHIVO_AQUÍ.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* 1. Configuración general de la pantalla */
 body {
     background-color: #f4f3ef; 
     margin: 0;
     padding: 20px;
-    font-family: 'Quicksand', sans-serif; /* Tipografía suave */
+    font-family: 'MiTipografiaPropia', sans-serif; /* Aplica tu letra a toda la web */
     color: #333;
     display: flex;
     justify-content: center;
@@ -29,8 +38,8 @@ body {
 }
 
 .cabecera h1 {
-    font-family: 'Playfair Display', serif; /* Tipografía elegante */
-    font-size: 36px;
+    font-family: 'MiTipografiaPropia', serif; /* Aplica tu letra también al título grande */
+    font-size: 42px;
     letter-spacing: 4px;
     margin: 0;
     color: #4a5d4e; 
@@ -124,7 +133,7 @@ button {
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'MiTipografiaPropia', sans-serif; /* Tu letra en los botones */
     transition: background 0.2s;
 }
 
