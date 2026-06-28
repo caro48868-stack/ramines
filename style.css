@@ -1,9 +1,9 @@
 /* 1. Configuración general de la pantalla */
 body {
-    background-color: #f4f3ef; /* Un fondo claro muy limpio */
+    background-color: #f4f3ef; 
     margin: 0;
     padding: 20px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Quicksand', sans-serif; /* Tipografía suave */
     color: #333;
     display: flex;
     justify-content: center;
@@ -29,10 +29,11 @@ body {
 }
 
 .cabecera h1 {
-    font-size: 28px;
-    letter-spacing: 3px;
+    font-family: 'Playfair Display', serif; /* Tipografía elegante */
+    font-size: 36px;
+    letter-spacing: 4px;
     margin: 0;
-    color: #4a5d4e; /* Verde oscuro elegante */
+    color: #4a5d4e; 
 }
 
 .cabecera p {
@@ -50,13 +51,13 @@ body {
     align-items: flex-start;
 }
 
-/* 5. El lienzo donde ahora cargará tu dibujo "fondo.png" */
+/* 5. El lienzo donde carga tu dibujo "fondo.png" */
 .contenedor-lienzo {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    background-image: url('flores/fondo.png'); /* Busca tu imagen renombrada */
-    background-size: cover; /* Hace que tu dibujo llene todo el cuadro */
+    background-image: url('flores/fondo.png'); 
+    background-size: cover; 
     background-position: center;
 }
 
@@ -76,6 +77,7 @@ body {
     color: #555;
     margin-bottom: 15px;
     text-align: center;
+    font-weight: 700;
 }
 
 /* 7. Cuadrícula de flores */
@@ -122,6 +124,7 @@ button {
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
     transition: background 0.2s;
 }
 
