@@ -1,8 +1,8 @@
-/* 0. REGISTRAR TU PROPIA TIPOGRAFÍA */
+/* 0. REGISTRAR TU PROPIA TIPOGRAFÍA MANUSCRITA */
 @font-face {
     font-family: 'MiTipografiaPropia';
-    /* ⚠️ IMPORTANTE: Cambia 'TU_FUENTE.ttf' por el nombre exacto de tu archivo (con su .ttf o .otf) */
-    src: url('flores/TU_FUENTE.ttf') format('truetype'); 
+    /* Configurado exactamente para tu archivo mia.otf */
+    src: url('flores/mia.otf') format('opentype'); 
     font-weight: normal;
     font-style: normal;
 }
@@ -12,7 +12,7 @@ body {
     background-color: #f4f3ef; 
     margin: 0;
     padding: 20px;
-    font-family: 'MiTipografiaPropia', sans-serif; /* Aplica tu letra a toda la web */
+    font-family: 'MiTipografiaPropia', sans-serif; /* Tu letra para toda la web */
     color: #333;
     display: flex;
     justify-content: center;
@@ -38,15 +38,15 @@ body {
 }
 
 .cabecera h1 {
-    font-family: 'MiTipografiaPropia', serif; /* Aplica tu letra al título principal */
-    font-size: 42px;
+    font-family: 'MiTipografiaPropia', serif; /* Tu letra en el título principal */
+    font-size: 52px; /* Un pelín más grande para que luzcan tus trazos */
     letter-spacing: 2px;
     margin: 0;
     color: #4a5d4e; 
 }
 
 .cabecera p {
-    font-size: 14px;
+    font-size: 18px;
     color: #888;
     margin: 5px 0 0 0;
 }
@@ -82,7 +82,7 @@ body {
 
 .panel-control h3 {
     margin-top: 0;
-    font-size: 16px;
+    font-size: 20px;
     color: #555;
     margin-bottom: 15px;
     text-align: center;
@@ -128,7 +128,7 @@ body {
 
 button {
     padding: 12px;
-    font-size: 14px;
+    font-size: 16px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
