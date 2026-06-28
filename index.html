@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Ramines</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramines - Flores Virtuales</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
 </head>
-
 <body>
 
-<h1>💐 Crea tu ramo</h1>
+    <div class="interfaz-juego">
+        
+        <header class="cabecera">
+            <h1>RAMINES</h1>
+            <p>Diseña tu ramo de flores virtual</p>
+        </header>
 
-<div id="lienzo">
+        <div class="zona-trabajo">
+            <div class="contenedor-lienzo">
+                <canvas id="jardin" width="450" height="450"></canvas>
+            </div>
 
-</div>
+            <div class="panel-control">
+                <h3>Tus Flores</h3>
+                <div class="cuadrícula-flores">
+                    <img src="flores/flor 1.png" class="flor-item" data-img="flores/flor 1.png" alt="Flor 1">
+                    <img src="flores/flor 2.png" class="flor-item" data-img="flores/flor 2.png" alt="Flor 2">
+                    <img src="flores/flor 3.png" class="flor-item" data-img="flores/flor 3.png" alt="Flor 3">
+                    <img src="flores/flor 5.png" class="flor-item" data-img="flores/flor 5.png" alt="Flor 5">
+                    <img src="flores/flor 6.png" class="flor-item" data-img="flores/flor 6.png" alt="Flor 6">
+                    <img src="flores/flor 7.png" class="flor-item" data-img="flores/flor 7.png" alt="Flor 7">
+                </div>
 
-<div id="menu">
+                <div class="acciones">
+                    <button id="btn-borrar" class="boton-peligro">Borrar seleccionada</button>
+                    <button id="btn-limpiar" class="boton-secundario">Empezar de nuevo</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 
-<img src="flores/flor 1.png">
-
-<img src="flores/flor 2.png">
-
-<img src="flores/flor 3.png">
-
-<img src="flores/flor 5.png">
-
-<img src="flores/flor 6.png">
-
-<img src="flores/flor 7.png">
-
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
